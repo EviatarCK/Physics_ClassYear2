@@ -61,7 +61,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 84ae1d0a2d6f60746bcc09b4cf47794b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -109,7 +109,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
+  boom: {fileID: 4066271996513189308, guid: ceaba32d623f92c459e04483cf05ee59, type: 3}
+  pigs:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   mass: 6
-  ShootFroce: 50
-  gravity: 2
-  traction: 5
+  ShootFroce: 15
+  gravity: 1.5
+  traction: 8.5

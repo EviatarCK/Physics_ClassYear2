@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1488598152234015905}
   - component: {fileID: 1488598152234015904}
   m_Layer: 0
-  m_Name: Ball 1
+  m_Name: Ball 5
   m_TagString: Ball
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 1488598152234015907}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -61,7 +61,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: d77333d7187f4f64c97c27f010314964, type: 2}
+  - {fileID: 2100000, guid: d494771ad4fe11a4fb2b5e6751202cef, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -114,7 +114,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  mass: 20
+  mass: 1
   ShootFroce: 15
-  gravity: 2.5
+  gravity: 1.5
   traction: 8.5

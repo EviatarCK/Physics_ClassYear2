@@ -1,12 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Shoot : MonoBehaviour
 {
 
     [SerializeField] Transform FirePoint;
     [SerializeField] GameObject[] Ball;
+    public Text points;
+    public int pointcount;
     public bool BallIsAlive;
 
     void Update()
@@ -20,14 +23,12 @@ public class Shoot : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0) && !BallIsAlive)
         {
-            var rand = Random.Range(0, 11);
+            var rand = Random.Range(0, 5);
             Instantiate(Ball[rand], FirePoint);
-
         }
-
-        if (Input.GetMouseButtonUp(0))
+        if (Input.GetMouseButtonDown(1))
         {
-            Invoke("DestroyTheBall", 5);
+            DestroyTheBall();
         }
     }
 
@@ -47,5 +48,10 @@ public class Shoot : MonoBehaviour
         {
             BallIsAlive = true;
         }
+    }
+
+    public void AddPoints()
+    {
+        pointcount += 5;
     }
 }

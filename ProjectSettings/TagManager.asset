@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Floor
   - Ball
+  - Pig
+  - Pig 2
+  - Pig 3
   layers:
   - Default
   - TransparentFX
