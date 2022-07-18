@@ -115,6 +115,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   mass: 1
-  ShootFroce: 15
+  ShootFroce: 5
   gravity: 1.5
   traction: 8.5

@@ -11,6 +11,7 @@ public class Forces : MonoBehaviour
     [SerializeField] float ShootFroce;
     [SerializeField] float gravity;
     [SerializeField] float traction;
+    private float forward = 10;
     Vector3 vecZero = Vector3.zero;
     
 
@@ -24,28 +25,29 @@ public class Forces : MonoBehaviour
     void Update()
     {
         vecZero = Vector3.zero;
-        PullDownForce();
+        ApplyAllForces();
     }
 
-    void PullDownForce()
+    void ApplyAllForces()
     {
 
         float yAngle = player.transform.rotation.y;
         float xAngle = player.transform.rotation.x;
         vecZero.y += yAngle;
         vecZero.x += xAngle;
-        vecZero.z += 10;
+        vecZero.z += forward;
 
         if (!Input.GetMouseButton(0))
         {
-            if (transform.position.y > 0.7) // gravity
-            {
-                vecZero.y -= gravity;
-            }
             if (transform.position.y <= 1) // traction
             {
                 vecZero.z -= traction;
             }
+            if (transform.position.y > 0.7) // gravity
+            {
+                vecZero.y -= gravity;
+            }
+
             if (transform.position.z <= 0.5 && transform.position.z >= -0.5 && transform.position.y < 2.5 && transform.position.y > 0.5 && transform.position.x <= 13 && transform.position.x > 10)
             {
                 Destroy(gameObject);

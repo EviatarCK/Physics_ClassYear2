@@ -8,8 +8,6 @@ public class Shoot : MonoBehaviour
 
     [SerializeField] Transform FirePoint;
     [SerializeField] GameObject[] Ball;
-    public Text points;
-    public int pointcount;
     public bool BallIsAlive;
 
     void Update()
@@ -18,7 +16,7 @@ public class Shoot : MonoBehaviour
         IsBallAlive();
     }
 
-    void SpawnShot()
+    void SpawnShot() //spawn the ball
     {
 
         if (Input.GetMouseButtonDown(0) && !BallIsAlive)
@@ -36,7 +34,7 @@ public class Shoot : MonoBehaviour
     {
         var _currentBall = GameObject.FindGameObjectWithTag("Ball");
         Destroy(_currentBall);
-    }
+    } // destroy ball
 
     void IsBallAlive()
     {
@@ -48,10 +46,6 @@ public class Shoot : MonoBehaviour
         {
             BallIsAlive = true;
         }
-    }
+    } // checks if the ball alive
 
-    public void AddPoints()
-    {
-        pointcount += 5;
-    }
 }
